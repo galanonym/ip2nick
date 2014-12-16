@@ -1,0 +1,24 @@
+{
+  "name": "ip2nick",
+  "version": "0.0.1",
+  "description": "Simple library to generate a nickname out of an IP address.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nickname",
+    "generator",
+    "ip",
+    "address",
+    "nicknames",
+    "names",
+    "nick",
+    "syllable"
+  ],
+  "author": "Matteus Kalis",
+  "license": "MIT",
+  "dependencies": {
+    "validator": "^3.24.0"
+  }
+}
