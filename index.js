@@ -3,11 +3,10 @@ var a = require('./a.json');
 var o = require('./o.json');
 var validator = require('validator');
 
-var ip2nick = module.exports = function(ip, callback) {
+var ip2nick = module.exports = function(ip) {
 
     if ( ! validator.isIP(ip, 4)) {
-        callback(new Error('Invalid IPv4 address'));
-        return;
+        return undefined;
     }
     
     var splitted = ip.split('.');
@@ -20,16 +19,11 @@ var ip2nick = module.exports = function(ip, callback) {
     var third = splitted[3];
     
     var nickname = a[first] + o[second] + i[third];
-    callback(null, nickname);
+    return nickname;
 };
 
 //simple test, to be runned in console
 if ( ! module.parent ) {
-    ip2nick('182.171.24.224', function(error, nickname) {
-        console.log(error, nickname);
-    });;
-
-    ip2nick('171.24.224', function(error, nickname) {
-        console.log(error, nickname);
-    });;
+    console.log(ip2nick('182.171.24.224'));
+    console.log(ip2nick('171.24.224'));
 }

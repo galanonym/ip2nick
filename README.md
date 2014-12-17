@@ -7,13 +7,8 @@ It always returns same nickname for same IP address. Nickname collisions can hap
 ````
 var ip2nick = require('ip2nick');
 
-ip2nick('127.0.0.1', function(error, nick) {
-    if (error) {
-        console.log(error);
-        return;
-    }
-    console.log(nick);
-}
+ip2nick('127.0.0.1'); // => actblobid
+ip2nick('wrong'); // => undefined
 ````
 
 *** Example results ***
