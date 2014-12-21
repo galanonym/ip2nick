@@ -1,6 +1,6 @@
-var i = require('./i.json');
 var a = require('./a.json');
-var o = require('./o.json');
+var b = require('./b.json');
+var c = require('./c.json');
 var validator = require('validator');
 
 var ip2nick = module.exports = function(ip) {
@@ -18,7 +18,7 @@ var ip2nick = module.exports = function(ip) {
     var second = splitted[2];
     var third = splitted[3];
     
-    var nickname = a[first] + o[second] + i[third];
+    var nickname = a[first] + b[second] + c[third];
     return nickname;
 };
 
@@ -26,4 +26,9 @@ var ip2nick = module.exports = function(ip) {
 if ( ! module.parent ) {
     console.log(ip2nick('182.171.24.224'));
     console.log(ip2nick('171.24.224'));
+    console.log(ip2nick('111.' + random() + '.' + random() + '.' + random()));
+}
+
+function random() {
+    return Math.floor((Math.random() * 255));
 }
