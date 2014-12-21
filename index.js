@@ -27,6 +27,10 @@ if ( ! module.parent ) {
     console.log(ip2nick('182.171.24.224'));
     console.log(ip2nick('171.24.224'));
     console.log(ip2nick('111.' + random() + '.' + random() + '.' + random()));
+
+    console.log('example', ip2nick('127.0.0.1'));
+    console.log('example', ip2nick('255.255.255.255'));
+    console.log('example', ip2nick('192.168.1.5'));
 }
 
 function random() {

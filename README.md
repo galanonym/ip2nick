@@ -13,6 +13,6 @@ ip2nick('wrong'); // => undefined
 
 *** Example results ***
 
-* 127.0.0.1 => actblobid
-* 255.255.255.255 => zapluzig
-* 192.168.1.5 => plankblockbit
+* 127.0.0.1 => achuk4u
+* 255.255.255.255 => 7step7u
+* 192.168.1.5 => abkav1h
